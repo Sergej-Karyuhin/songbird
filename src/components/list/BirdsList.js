@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import 'react-h5-audio-player/lib/styles.css';
 import './style.css';
 import AudioPlayer from 'react-h5-audio-player';
+import correctAnswerSound from './answerTrue.mp3';
+import incorrectAnswerSound from './answerFalse.mp3';
+import finishSound from './finish.mp3';
 
 
 class BirdList extends Component {
@@ -13,6 +16,7 @@ class BirdList extends Component {
       score: 5,
     }
     this.nextLvlRef = React.createRef();
+    this.congratsAudio = new Audio(finishSound);
   }
 
   isCorrectBird = (birdInfo, e) => {
@@ -27,6 +31,8 @@ class BirdList extends Component {
       return;
     };
     if (birdInfo.name === this.props.birdsData[this.props.currentRound][this.props.randomNumber].name) {
+       const correctAnswerAudio = new Audio(correctAnswerSound);
+       correctAnswerAudio.play();
        e.target.firstChild.classList.add("correct-answer");
        this.nextLvlRef.current.classList.add("correct-answer-next-lvl");
        this.props.correctBirdName(birdInfo);
@@ -37,6 +43,8 @@ class BirdList extends Component {
        });
      } else {
        if (e.target.firstChild.classList.contains("incorrect-answer")) return;
+       const incorrectAnswerAudio = new Audio(incorrectAnswerSound);
+       incorrectAnswerAudio.play();
        e.target.firstChild.classList.add("incorrect-answer");
        this.setState({
          score: this.state.score - 1,
@@ -70,7 +78,7 @@ class BirdList extends Component {
       });
       document.querySelector('.congrats-container').classList.remove('hide');
       this.congratsAudio.play();
-      setTimeout(() => this.congratsAudio.pause(), 3000);
+      setTimeout(() => this.congratsAudio.pause(), 5000);
     }
   }
 

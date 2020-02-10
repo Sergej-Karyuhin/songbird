@@ -6,9 +6,14 @@ import AudioPlayer from 'react-h5-audio-player';
 class BirdQuestion extends Component {
   render() {
     const birdsData = this.props.birdsData;
+    if (this.props.birdName !== '*****') {
+      this.player.audio.pause();
+    }
     const Player = () => (
       <AudioPlayer
+        className="audio-player"
         src={birdsData[this.props.currentRound][this.props.randomNumber].audio}
+        ref={c => (this.player = c)}
       />
     );
     return (

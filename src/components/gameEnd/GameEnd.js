@@ -11,7 +11,7 @@ class GameEnd extends Component {
         </div>
     :
        <div className="congrats-container hide">
-          <h2 className="text-primary congrats">Congrats!</h2>
+          <h2 className="congrats">Congrats!</h2>
           <p>Result: {this.props.score} / {this.props.maxScore}</p>
           <img src={theend} alt="theend"></img>
           <div className="try-again" onClick={this.props.restartGame}><p>Play again</p></div>
