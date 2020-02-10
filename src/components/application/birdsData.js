@@ -21,7 +21,7 @@ const birdsData = [
       name: 'Перепелочка Мариша',
       species: 'Да, да. Это я! (с)',
       description: 'Озорная птичка. Иногда проказничает.',
-      image: 'https://live.staticflickr.com//65535//48539007512_5029d2a9a0.jpg',
+      image: 'https://i.ibb.co/gFtnfwH/Marisha.jpg',
       audio: 'https://www.xeno-canto.org/sounds/uploaded/AUSMZGKHJF/XC526343-Marisha.mp3'
     },
     {
