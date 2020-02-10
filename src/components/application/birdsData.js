@@ -18,11 +18,11 @@ const birdsData = [
     },
     {
       id: 3,
-      name: 'Ласточка',
-      species: 'Delichon urbicum',
-      description: 'Для ласточек характерно негромкое щебетание. Песни ласточек не смолкают на протяжении всего лета. Исследователи различают у птиц до 6 щебечущих звуков: «вит», «ви-вит», «чивит», «чиривит» и т.п. Ласточки любят петь дуэтом.',
+      name: 'Перепелочка Мариша',
+      species: 'Да, да. Это я! (с)',
+      description: 'Озорная птичка. Иногда проказничает.',
       image: 'https://live.staticflickr.com//65535//48539007512_5029d2a9a0.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3'
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/AUSMZGKHJF/XC526343-Marisha.mp3'
     },
     {
       id: 4,
