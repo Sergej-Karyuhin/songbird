@@ -107,7 +107,7 @@ class BirdInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      birdInfoBlock: !this.props.birdInfo || (!document.querySelector('.correct-answer') && !document.querySelector('.incorrect-answer')) ? <div className="bird-description-container"><p>Choose a bird</p></div> :
+      birdInfoBlock: !this.props.birdInfo || (!document.querySelector('.correct-answer') && !document.querySelector('.incorrect-answer')) ? <div className="bird-description-container"><p>Listen to player and choose a bird</p></div> :
                <div>
                 <div className="bird-description">
                   <img src={this.props.birdInfo.image} alt="bird"/>
