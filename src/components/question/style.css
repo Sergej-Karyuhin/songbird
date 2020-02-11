@@ -31,7 +31,6 @@ audio {
 @media (max-width: 550px) {
   .bird-question img {
     max-width: 150px;
-    max-height: 100px;
   }
   .bird-question p {
     font-size: 25px;
